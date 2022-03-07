@@ -11,5 +11,8 @@
     "react"
   ],
   "author": "Milo Juarez <milojuarez.dev@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "react-router-dom": "^6.2.2"
+  }
 }
