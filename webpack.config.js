@@ -10,6 +10,12 @@ module.exports = {
         publicPath: "/",
     },
     mode: "development",
+    resolve: {
+        extensions: [".js", ".jsx"],
+        alias: {
+            "@styles": path.resolve(__dirname, "src/styles/"),
+        },
+    },
     module: {
         rules: [
             {
@@ -26,8 +32,8 @@ module.exports = {
                 },
             },
             {
-                test: /\.(css|scss)$/,
-                use: ["css-loader", "style-loader", "sass-loader"],
+                test: /\.(css|scss)$/i,
+                use: ["style-loader", "css-loader", "sass-loader"],
             },
             {
                 test: /\.(png|svg|jpg|gif)$/,
@@ -49,7 +55,7 @@ module.exports = {
             directory: path.join(__dirname, "dist"),
         },
         port: 3005,
-        comporess: true,
-        histotyApiFallback: true,
+        compress: true,
+        historyApiFallback: true,
     },
 };
