@@ -1,0 +1,83 @@
+@use "_vars";
+
+.Header {
+    position: relative;
+    display: flex;
+    min-width: 320px;
+    width: 100vw;
+    height: 80px;
+    background-color: vars.$primary-color;
+    color: vars.$text-color;
+    border-bottom: 1px solid vars.$secondary-color;
+    padding: 0 vars.$pc;
+    box-sizing: border-box;
+}
+.Header__title {
+    min-width: 200px;
+    width: vars.$wcategory;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.Header__title a {
+    display: block;
+    padding: vars.$m calc(vars.$pc / 2);
+    font-size: vars.$fs-lg;
+    text-decoration: none;
+    color: vars.$text-color;
+}
+.Menu__icon {
+    position: absolute;
+    top: vars.$mb;
+    right: vars.$mb;
+    display: none;
+    place-content: center;
+    width: 32px;
+    height: 32px;
+    background-color: vars.$secondary-color;
+    border-radius: vars.$bradius;
+    img {
+        width: 24px;
+        height: 24px;
+    }
+}
+.Header__menu {
+    display: flex;
+    width: calc(100vw - vars.$wcategory);
+    justify-content: flex-end;
+}
+.Menu {
+    display: flex;
+    margin-right: vars.$m;
+    list-style: none;
+}
+.Menu__item {
+    font-size: vars.$fs-lg;
+}
+.Menu__item a {
+    display: block;
+    padding: vars.$m calc(vars.$pc / 2);
+    text-decoration: none;
+    color: vars.$text-color;
+    border-radius: vars.$bradius;
+    border: 1px solid vars.$primary-color;
+
+    &:hover {
+        border: 1px solid vars.$text-color;
+    }
+}
+.Menu__item--active a {
+    border: 1px solid vars.$text-color;
+}
+
+@media screen and (max-width: 650px) {
+    .Menu__icon {
+        display: grid;
+    }
+    .Header__title {
+        width: 100vw;
+    }
+    .Menu {
+        display: none;
+    }
+}
