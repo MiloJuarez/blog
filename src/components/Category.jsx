@@ -4,7 +4,11 @@ import "@styles/Category.scss";
 
 const Category = ({ category }) => {
     const handleCollapse = (e) => {
-        e.target.classList.toggle("Category--active");
+        if (e.target.classList.contains("Category--active")) {
+            e.target.classList.remove("Category--active");
+        } else {
+            e.target.classList.add("Category--active");
+        }
         let content = e.target.nextElementSibling;
         if (content.style.maxHeight) {
             content.style.maxHeight = null;
@@ -16,9 +20,9 @@ const Category = ({ category }) => {
     return (
         <div className='Category'>
             <div className='Category__title' onClick={handleCollapse}>
-                # Categoria 1
+                {category.title}
             </div>
-            <PostList children={null} />
+            <PostList children={category.posts} />
         </div>
     );
 };

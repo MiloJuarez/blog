@@ -7,14 +7,61 @@ const Home = () => {
     return (
         <div className='Home'>
             <Categories>
-                <Category />
-                <Category />
-                <Category />
-                <Category />
-                <Category />
-                <Category />
-                <Category />
-                <Category />
+                <Category
+                    category={{
+                        id: 1,
+                        title: "Laravel",
+                        active: false,
+                        posts: [
+                            {
+                                id: 1,
+                                id_category: 1,
+                                title: "Custom pagination",
+                                active: false,
+                                tags: ["introduction", "example", "conclusion"],
+                            },
+                        ],
+                    }}
+                />
+                <Category
+                    category={{
+                        id: 2,
+                        title: "Flutter",
+                        active: true,
+                        posts: [
+                            {
+                                id: 2,
+                                id_category: 2,
+                                title: "Snacbars",
+                                active: true,
+                                tags: ["introduction", "example", "conclusion"],
+                            },
+                            {
+                                id: 3,
+                                id_category: 2,
+                                title: "Custom Appbar",
+                                active: false,
+                                tags: ["description", "example", "conclusion"],
+                            },
+                        ],
+                    }}
+                />
+                <Category
+                    category={{
+                        id: 3,
+                        title: "Java",
+                        active: false,
+                        posts: [
+                            {
+                                id: 3,
+                                id_category: 3,
+                                title: "JPanel with multiple tabs",
+                                active: false,
+                                tags: ["introduction", "example", "conclusion"],
+                            },
+                        ],
+                    }}
+                />
             </Categories>
         </div>
     );
