@@ -47,7 +47,7 @@ const PostContent = () => {
                         Conclusion
                     </p>
                     <div className='PostContent__text'>
-                        Som text here which will be replaced with real data
+                        Som text here which will be replaced with real data Som
                     </div>
                 </section>
             </div>

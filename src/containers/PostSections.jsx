@@ -7,7 +7,7 @@ const PostSections = ({ sections }) => {
             <div className='PostSections__title'>Snacbars</div>
             <ul className='PostSections__items'>
                 <li className='PostSections__item'>
-                    <a href='#introdution'>Introduction</a>
+                    <a href='#introduction'>Introduction</a>
                 </li>
                 <li className='PostSections__item'>
                     <a href='#example'>Example</a>

@@ -2,9 +2,11 @@
 
 .PostContent {
     width: vars.$wcontent;
+    margin-left: vars.$wcategory;
     margin-top: vars.$mb;
     padding: 0 vars.$pc;
     color: vars.$text-color;
+    box-sizing: border-box;
 }
 .PostContent section {
     margin-bottom: calc(vars.$mb * 2);
@@ -25,6 +27,10 @@
 @media screen and (max-width: 1280px) {
     .PostContent {
         width: calc(vars.$fullWidth - vars.$wcategory);
+    }
+}
+@media screen and (max-width: 1080px) {
+    .PostContent {
         margin: 0 auto;
     }
 }

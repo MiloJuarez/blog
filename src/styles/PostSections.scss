@@ -1,10 +1,13 @@
 @use "vars";
 
 .PostSections {
+    position: fixed;
+    right: 0;
     width: vars.$wsection;
     margin-top: vars.$mb;
     padding: vars.$pc 0 vars.$pc;
     color: vars.$text-color;
+    box-sizing: border-box;
 }
 .PostSections__title {
     font-size: vars.$fs-md;
