@@ -1,0 +1,5 @@
+@use "vars";
+
+body {
+    background-color: vars.$primary-color;
+}
