@@ -1,0 +1,24 @@
+@use "vars";
+
+.PostContent {
+    width: vars.$wcontent;
+    margin-top: vars.$mb;
+    padding: 0 vars.$pc;
+    color: vars.$text-color;
+}
+.PostContent section {
+    margin-bottom: calc(vars.$mb * 2);
+}
+.PostContent__title {
+    margin-bottom: calc(vars.$mb * 3);
+}
+.PostContent__subtitle {
+    font-size: vars.$fs-md;
+    font-weight: bold;
+}
+.PostContent__text {
+    font-size: vars.$fs-nr;
+    line-height: vars.$fs-md;
+    letter-spacing: 1px;
+    vertical-align: baseline;
+}

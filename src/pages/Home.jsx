@@ -2,6 +2,7 @@ import React from "react";
 import Category from "@components/Category";
 import Categories from "@containers/Categories";
 import "@styles/Home.scss";
+import PostContent from "@containers/PostContent";
 
 const Home = () => {
     return (
@@ -63,6 +64,7 @@ const Home = () => {
                     }}
                 />
             </Categories>
+            <PostContent />
         </div>
     );
 };
