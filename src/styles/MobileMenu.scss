@@ -1,0 +1,74 @@
+@use "vars";
+
+.MobileMenu {
+    position: absolute;
+    justify-content: flex-end;
+    background-color: vars.$primary-color;
+    animation-name: showMenu;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    box-sizing: border-box;
+}
+.MobileMenu__close {
+    position: absolute;
+    display: grid;
+    top: vars.$mb;
+    right: vars.$mb;
+    width: 48px;
+    height: 48px;
+    place-content: center;
+    font-size: vars.$mfs-lg;
+    background-color: vars.$secondary-color;
+    border-radius: vars.$bradius;
+}
+.MobileMenu__items {
+    list-style: none;
+    margin: calc(vars.$mb * 4) vars.$mb vars.$mb;
+    padding: calc(vars.$mb * 2) 0;
+}
+.MobileMenu .Menu__item {
+    font-size: vars.$mfs-md;
+}
+.MobileMenu .Menu__item a {
+    display: block;
+    margin-bottom: vars.$m;
+    padding: vars.$m vars.$pc;
+    text-align: end;
+    text-decoration: none;
+    color: vars.$text-color;
+    border-radius: vars.$bradius;
+}
+.MobileMenu .Menu__item--active a {
+    border: 1px solid vars.$text-color;
+}
+@keyframes showMenu {
+    from {
+        left: 100vw;
+        top: -100vh;
+        width: 0;
+        height: 0;
+    }
+    to {
+        top: 0;
+        right: 0;
+        left: 0;
+        width: 100vw;
+        min-height: 100vh;
+    }
+}
+@keyframes hideMenu {
+    from {
+        top: 0;
+        right: 0;
+        left: 0;
+        width: 100vw;
+        min-height: 100vh;
+    }
+    to {
+        left: 100vw;
+        top: -100vh;
+        width: 0;
+        height: 0;
+    }
+}
