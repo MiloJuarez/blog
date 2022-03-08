@@ -1,10 +1,14 @@
 import React from "react";
+import Category from "@components/Category";
+import Categories from "@containers/Categories";
+import "@styles/Home.scss";
 
 const Home = () => {
     return (
-        <div>
-            <h1>BLOG BUILDING...</h1>
-            <p>Some paragraph here to test fonts</p>
+        <div className='Home'>
+            <Categories>
+                <Category />
+            </Categories>
         </div>
     );
 };

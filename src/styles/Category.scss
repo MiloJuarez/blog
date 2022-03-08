@@ -1,0 +1,14 @@
+@use "vars";
+
+.Category {
+    margin-top: vars.$mb;
+}
+.Category__title {
+    padding: calc(vars.$m / 2) vars.$m;
+    font-size: vars.$fs-md;
+    color: vars.$secondary-color-ligth;
+    border-radius: vars.$bradius;
+}
+.Category__title:hover {
+    cursor: pointer;
+}

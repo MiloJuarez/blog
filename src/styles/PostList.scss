@@ -1,0 +1,32 @@
+@use "vars";
+
+.PostList ul {
+    margin: vars.$m 0 0 0;
+    padding: 0 0 0 vars.$m;
+    list-style: none;
+}
+.PostList ul .Post a {
+    display: block;
+    padding: calc(vars.$m / 2) vars.$m;
+    font-size: vars.$fs-nr;
+    color: vars.$secondary-color-ligth;
+    text-decoration: none;
+    border-radius: vars.$bradius;
+    border: 1px solid vars.$primary-color;
+}
+.PostList ul .Post a:hover {
+    background: linear-gradient(
+        to right,
+        vars.$secondary-color,
+        vars.$primary-color
+    );
+    color: vars.$text-color;
+}
+.PostList ul .Post--active a {
+    background: linear-gradient(
+        to right,
+        vars.$secondary-color,
+        vars.$primary-color
+    );
+    color: vars.$text-color;
+}

@@ -1,0 +1,19 @@
+@use "vars";
+
+.Categories {
+    position: absolute;
+    min-width: 250px;
+    width: vars.$wcategory;
+    margin-top: vars.$mb;
+    padding: vars.$pc;
+    box-sizing: border-box;
+}
+.Categories__title {
+    font-size: vars.$fs-lg;
+    color: vars.$secondary-color-ligth;
+}
+@media screen and (max-width: 1024px) {
+    .Categories {
+        left: calc(0% - 50%);
+    }
+}
