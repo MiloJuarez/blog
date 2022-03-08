@@ -26,8 +26,19 @@
 .PostSections__item a:hover {
     color: vars.$secondary-color-ligth;
 }
+@keyframes hideRight {
+    from {
+        right: 0;
+    }
+    to {
+        right: calc(0vw - vars.$wsection);
+    }
+}
 @media screen and (max-width: 1280px) {
     .PostSections {
-        display: none;
+        animation-name: hideRight;
+        animation-duration: vars.$aDuration;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
     }
 }

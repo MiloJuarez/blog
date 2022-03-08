@@ -2,6 +2,7 @@
 
 .Categories {
     position: fixed;
+    left: 0;
     min-width: 250px;
     width: vars.$wcategory;
     margin-top: vars.$mb;
@@ -12,8 +13,18 @@
     font-size: vars.$fs-lg;
     color: vars.$secondary-color-ligth;
 }
+@keyframes hideLeft {
+    from {
+        left: 0;
+    }
+    to {
+        left: calc(0vw - vars.$wcategory);
+    }
+}
 @media screen and (max-width: 1080px) {
     .Categories {
-        display: none;
+        animation-name: hideLeft;
+        animation-duration: vars.$aDuration;
+        animation-fill-mode: forwards;
     }
 }
