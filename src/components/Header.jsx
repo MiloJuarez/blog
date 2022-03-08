@@ -10,10 +10,12 @@ const Header = () => {
         if (toggleMenu) {
             document.getElementById("MobileMenu").style.animationName =
                 "hideMenu";
+            document.body.classList.remove("disableScroll");
             setTimeout(() => {
                 setToggleMenu(!toggleMenu);
             }, 1000);
         } else {
+            document.body.classList.add("disableScroll");
             setToggleMenu(!toggleMenu);
         }
     };

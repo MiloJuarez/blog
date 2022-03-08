@@ -1,7 +1,9 @@
 @use "vars";
 
 .MobileMenu {
-    position: absolute;
+    position: fixed;
+    width: 100vw;
+    min-height: 100vh;
     justify-content: flex-end;
     background-color: vars.$primary-color;
     animation-name: showMenu;
@@ -9,6 +11,7 @@
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
     box-sizing: border-box;
+    z-index: 1;
 }
 .MobileMenu__close {
     position: absolute;
@@ -21,6 +24,7 @@
     font-size: vars.$mfs-lg;
     background-color: vars.$secondary-color;
     border-radius: vars.$bradius;
+    z-index: 10;
 }
 .MobileMenu__items {
     list-style: none;
@@ -40,35 +44,30 @@
     border-radius: vars.$bradius;
 }
 .MobileMenu .Menu__item--active a {
-    border: 1px solid vars.$text-color;
+    background: linear-gradient(
+        to left,
+        vars.$secondary-color,
+        vars.$primary-color
+    );
+    color: vars.$text-color;
 }
 @keyframes showMenu {
     from {
-        left: 100vw;
+        right: -100vw;
         top: -100vh;
-        width: 0;
-        height: 0;
     }
     to {
         top: 0;
         right: 0;
-        left: 0;
-        width: 100vw;
-        min-height: 100vh;
     }
 }
 @keyframes hideMenu {
     from {
         top: 0;
         right: 0;
-        left: 0;
-        width: 100vw;
-        min-height: 100vh;
     }
     to {
-        left: 100vw;
+        right: -100vw;
         top: -100vh;
-        width: 0;
-        height: 0;
     }
 }
