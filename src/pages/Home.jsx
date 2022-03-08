@@ -3,6 +3,7 @@ import Category from "@components/Category";
 import Categories from "@containers/Categories";
 import "@styles/Home.scss";
 import PostContent from "@containers/PostContent";
+import PostSections from "../containers/PostSections";
 
 const Home = () => {
     return (
@@ -65,6 +66,7 @@ const Home = () => {
                 />
             </Categories>
             <PostContent />
+            <PostSections />
         </div>
     );
 };

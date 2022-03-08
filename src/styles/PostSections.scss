@@ -1,0 +1,25 @@
+@use "vars";
+
+.PostSections {
+    width: vars.$wsection;
+    margin-top: vars.$mb;
+    padding: vars.$pc 0 vars.$pc;
+    color: vars.$text-color;
+}
+.PostSections__title {
+    font-size: vars.$fs-md;
+}
+.PostSections__items {
+    list-style: none;
+    padding: 0 vars.$pc 0;
+}
+.PostSections__item a {
+    display: block;
+    padding: calc(vars.$m / 2);
+    font-size: vars.$fs-nr;
+    text-decoration: none;
+    color: vars.$text-color;
+}
+.PostSections__item a:hover {
+    color: vars.$secondary-color-ligth;
+}
