@@ -5,7 +5,7 @@
     display: flex;
     min-width: 320px;
     width: 100%;
-    height: 80px;
+    height: vars.$hHeader;
     background-color: vars.$primary-color;
     color: vars.$text-color;
     border-bottom: 1px solid vars.$secondary-color;
@@ -71,6 +71,11 @@
 }
 
 @media screen and (max-width: 675px) {
+    .Header {
+        position: fixed;
+        top: 0;
+        z-index: 1;
+    }
     .Menu__icon {
         display: grid;
     }
