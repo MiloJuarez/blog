@@ -23,3 +23,8 @@
 .PostSections__item a:hover {
     color: vars.$secondary-color-ligth;
 }
+@media screen and (max-width: 1280px) {
+    .PostSections {
+        display: none;
+    }
+}

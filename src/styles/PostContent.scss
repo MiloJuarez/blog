@@ -22,3 +22,9 @@
     letter-spacing: 1px;
     vertical-align: baseline;
 }
+@media screen and (max-width: 1280px) {
+    .PostContent {
+        width: calc(vars.$fullWidth - vars.$wcategory);
+        margin: 0 auto;
+    }
+}
