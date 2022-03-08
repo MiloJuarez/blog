@@ -1,7 +1,7 @@
 @use "vars";
 
 .Category {
-    margin-top: vars.$mb;
+    margin-top: calc(vars.$mb / 2);
 }
 .Category__title {
     padding: calc(vars.$m / 2) vars.$m;
@@ -10,5 +10,19 @@
     border-radius: vars.$bradius;
 }
 .Category__title:hover {
+    background: linear-gradient(
+        to left,
+        vars.$secondary-color,
+        vars.$primary-color
+    );
+    color: vars.$text-color;
     cursor: pointer;
+}
+.Category--active {
+    background: linear-gradient(
+        to left,
+        vars.$secondary-color,
+        vars.$primary-color
+    );
+    color: vars.$text-color;
 }

@@ -8,6 +8,13 @@ const Home = () => {
         <div className='Home'>
             <Categories>
                 <Category />
+                <Category />
+                <Category />
+                <Category />
+                <Category />
+                <Category />
+                <Category />
+                <Category />
             </Categories>
         </div>
     );

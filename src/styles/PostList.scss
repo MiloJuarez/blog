@@ -1,5 +1,10 @@
 @use "vars";
 
+.collapsible {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
 .PostList ul {
     margin: vars.$m 0 0 0;
     padding: 0 0 0 vars.$m;
