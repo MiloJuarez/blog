@@ -1,5 +1,6 @@
 import React from "react";
 import "@styles/Comments.scss";
+import Comment from "../components/Comment";
 
 const Comments = () => {
     return (
@@ -40,6 +41,9 @@ const Comments = () => {
                         </button>
                     </div>
                 </form>
+            </div>
+            <div className='Comments__container'>
+                <Comment />
             </div>
         </div>
     );
