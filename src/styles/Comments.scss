@@ -1,0 +1,99 @@
+@use "vars";
+
+.Comments {
+    width: vars.$fullWidth;
+    margin: calc(vars.$mb * 4) 0;
+}
+.Comments__divider {
+    margin: 0;
+    margin-bottom: vars.$mb;
+    font-size: vars.$fs-md;
+    border-bottom: 1px solid vars.$text-color;
+}
+.Comments__divider p {
+    margin: 0 0 vars.$m 0;
+    padding: 0;
+    font-weight: bold;
+}
+.Comments__form {
+    width: inherit;
+}
+.Form__flexinput {
+    display: flex;
+    width: vars.$fullWidth;
+    justify-content: space-between;
+}
+.Form__flexinput--row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.Form__control {
+    width: calc(calc(vars.$fullWidth / 2) - vars.$pc);
+    margin-bottom: vars.$mb;
+    box-sizing: border-box;
+}
+.Form__submit {
+    width: fit-content;
+    margin-top: vars.$mb;
+    padding: vars.$m calc(vars.$pc / 2);
+    font-size: vars.$fs-nr;
+    color: vars.$text-color;
+    background-color: vars.$secondary-color;
+    border: 2px solid vars.$secondary-color-ligth;
+    border-radius: vars.$bradius;
+    cursor: pointer;
+}
+.Form__submit:hover {
+    background-color: vars.$primary-color;
+    border: 2px solid vars.$text-color;
+}
+::placeholder {
+    color: vars.$text-color;
+}
+input,
+textarea {
+    width: 100%;
+    height: calc(calc(vars.$pc * 2) + vars.$m);
+    padding: 0 vars.$pc;
+    font-family: vars.$ffamily;
+    font-size: vars.$fs-nr;
+    font-weight: bold;
+    color: vars.$text-color;
+    background-color: vars.$primary-color;
+    border: 1px solid vars.$text-color;
+    border-radius: vars.$bradius;
+    outline: none;
+    box-sizing: border-box;
+}
+textarea {
+    padding: vars.$pc;
+    min-height: vars.$hHeader;
+}
+input:hover,
+input:focus,
+textarea:hover,
+textarea:focus,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    transition: background-color 5000s ease-in-out 0s;
+    border: 2px solid vars.$text-color;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    -webkit-text-fill-color: vars.$text-color;
+    transition: background-color 5000s ease-in-out 0s;
+}
+@media screen and (max-width: 720px) {
+    .Form__flexinput {
+        flex-direction: column;
+    }
+    .Form__control {
+        width: vars.$fullWidth;
+    }
+}

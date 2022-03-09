@@ -1,5 +1,6 @@
 import React from "react";
 import "@styles/PostContent.scss";
+import Comments from "@containers/Comments";
 
 const PostContent = () => {
     return (
@@ -51,6 +52,7 @@ const PostContent = () => {
                     </div>
                 </section>
             </div>
+            <Comments />
         </div>
     );
 };
