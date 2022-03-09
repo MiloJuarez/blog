@@ -1,0 +1,69 @@
+@use "vars";
+
+.Comment {
+    width: 100%;
+    margin: calc(vars.$mb * 4) 0;
+}
+.Comment__info {
+    display: flex;
+    height: calc(vars.$pc * 2);
+    margin: vars.$mb 0;
+    align-items: center;
+}
+.Comment__vote {
+    min-width: calc(vars.$pc * 2);
+    height: calc(vars.$pc * 2);
+    font-size: vars.$fs-nr;
+    color: vars.$text-color;
+    background-color: vars.$primary-color;
+    border-radius: vars.$bradius;
+    border: 1px solid vars.$text-color;
+    cursor: pointer;
+}
+.Comment__vote:hover {
+    background: linear-gradient(vars.$secondary-color, vars.$primary-color);
+}
+.Comment__author {
+    min-width: vars.$wcategory;
+    padding: 0 vars.$pc;
+    font-size: vars.$fs-nr;
+    font-weight: bold;
+    color: vars.$text-color;
+}
+.Comment__date {
+    font-size: vars.$fs-nr;
+    color: vars.$text-color;
+}
+.Comment__container {
+    display: flex;
+}
+.Comment__block {
+    width: 50px;
+    height: inherit;
+    margin-left: calc(vars.$pc * 3);
+    margin-right: vars.$m;
+    border-bottom-left-radius: calc(vars.$bradius / 2);
+    border-left: 2px solid vars.$text-color;
+    border-bottom: 2px solid vars.$text-color;
+}
+.Comment__content {
+    position: relative;
+}
+.Comment__content div {
+    margin-bottom: calc(vars.$mb * 2);
+}
+.Comment__reply {
+    position: absolute;
+    bottom: calc(0% - vars.$mb);
+    width: fit-content;
+    padding: vars.$m calc(vars.$pc / 2);
+    font-size: vars.$fs-nr;
+    color: vars.$text-color;
+    background-color: vars.$primary-color;
+    border: 1px solid vars.$text-color;
+    border-radius: vars.$bradius;
+    cursor: pointer;
+}
+.Comment__reply:hover {
+    background: linear-gradient(vars.$secondary-color, vars.$primary-color);
+}
