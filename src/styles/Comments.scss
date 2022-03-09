@@ -39,14 +39,13 @@
     padding: vars.$m calc(vars.$pc / 2);
     font-size: vars.$fs-nr;
     color: vars.$text-color;
-    background-color: vars.$secondary-color;
-    border: 2px solid vars.$secondary-color-ligth;
+    background-color: vars.$primary-color;
+    border: 1px solid vars.$text-color;
     border-radius: vars.$bradius;
     cursor: pointer;
 }
 .Form__submit:hover {
-    background-color: vars.$primary-color;
-    border: 2px solid vars.$text-color;
+    background: linear-gradient(vars.$secondary-color, vars.$primary-color);
 }
 ::placeholder {
     color: vars.$text-color;
