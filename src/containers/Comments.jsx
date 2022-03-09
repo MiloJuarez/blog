@@ -49,6 +49,7 @@ const Comments = () => {
                         parent_id: null,
                         author: "milo juarez gordillo",
                         date: "12 de feb de 2021 12:23pm",
+                        votes: 1,
                         content:
                             "Illas semine campoque declivia oppida corpora nam inter fuit discordia tellus solidumque iunctarum erat: quae terrenae ubi rerum recessit iudicis aestu fixo.Illas semine campoque declivia oppida corpora nam inter fuit discordia tellus solidumque iunctarum erat: quae terrenae ubi rerum recessit iudicis aestu fixo Illas semine campoque declivia oppida corpora nam inter fuit discordia tellus solidumque iunctarum erat: quae terrenae ubi",
                         comment_replies: [],
@@ -61,6 +62,7 @@ const Comments = () => {
                         parent_id: null,
                         author: "fernando aguirre",
                         date: "12 de feb de 2021 12:23pm",
+                        votes: 2,
                         content:
                             "recessit iudicis aestu fixo Illas semine campoque declivia oppida corpora nam inter fuit discordia tellus solidumque iunctarum erat: quae terrenae ubi",
                         comment_replies: [
@@ -69,6 +71,7 @@ const Comments = () => {
                                 parent_id: 2,
                                 author: "manuel sanchez",
                                 date: "12 de feb de 2021 12:23pm",
+                                votes: 4,
                                 content:
                                     "recessit iudicis aestu fixo Illas semine campoque declivia oppida corpora nam inter fuit discordia tellus solidumque iunctarum erat: quae terrenae ubi",
                                 comment_replies: [],

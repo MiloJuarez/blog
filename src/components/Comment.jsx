@@ -7,7 +7,7 @@ const Comment = ({ comment }) => {
         <div className='Comment'>
             <div className='Comment__info'>
                 <button type='button' className='Comment__vote'>
-                    1
+                    {comment.votes}
                 </button>
                 <p className='Comment__author'>{comment.author}</p>
                 <p className='Comment__date'>{comment.date}</p>
