@@ -7,7 +7,7 @@
 .Comment__info {
     display: flex;
     height: calc(vars.$pc * 2);
-    margin: vars.$mb 0;
+    margin: vars.$m 0;
     align-items: center;
 }
 .Comment__vote {
@@ -48,13 +48,14 @@
 }
 .Comment__content {
     position: relative;
-}
-.Comment__content div {
     margin-bottom: calc(vars.$mb * 2);
+}
+.Comment__content--mb {
+    margin-bottom: vars.$mb;
 }
 .Comment__reply {
     position: absolute;
-    bottom: calc(0% - vars.$mb);
+    bottom: calc(0% - calc(vars.$mb * 3));
     width: fit-content;
     padding: vars.$m calc(vars.$pc / 2);
     font-size: vars.$fs-nr;

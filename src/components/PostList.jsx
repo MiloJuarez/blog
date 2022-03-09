@@ -7,9 +7,8 @@ const PostList = ({ children }) => {
             <ul>
                 {children.map((child) => (
                     <li
-                        className={`Post ${
-                            child.active ? "Post--active" : ""
-                        }`}>
+                        className={`Post ${child.active ? "Post--active" : ""}`}
+                        key={`postItem-${child.id}`}>
                         <a href='/'>{child.title}</a>
                     </li>
                 ))}

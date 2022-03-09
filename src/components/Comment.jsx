@@ -1,5 +1,6 @@
 import React from "react";
 import "@styles/Comment.scss";
+import CommentReply from "./CommentReply";
 
 const Comment = ({ comment }) => {
     return (
@@ -8,23 +9,22 @@ const Comment = ({ comment }) => {
                 <button type='button' className='Comment__vote'>
                     1
                 </button>
-                <p className='Comment__author'>milo juarez gordillo</p>
-                <p className='Comment__date'>12 de feb de 2021 12:23pm</p>
+                <p className='Comment__author'>{comment.author}</p>
+                <p className='Comment__date'>{comment.date}</p>
             </div>
             <div className='Comment__container'>
                 <div className='Comment__block'></div>
                 <div className='Comment__content'>
-                    <div>
-                        Illas semine campoque declivia oppida corpora nam inter
-                        fuit discordia tellus solidumque iunctarum erat: quae
-                        terrenae ubi rerum recessit iudicis aestu fixo.Illas
-                        semine campoque declivia oppida corpora nam inter fuit
-                        discordia tellus solidumque iunctarum erat: quae
-                        terrenae ubi rerum recessit iudicis aestu fixo Illas
-                        semine campoque declivia oppida corpora nam inter fuit
-                        discordia tellus solidumque iunctarum erat: quae
-                        terrenae ubi
-                        <br />
+                    <div className='Comment__content--mb'>
+                        {comment.content}
+                    </div>
+                    <div className='Comment_replies'>
+                        {comment.comment_replies.map((reply) => (
+                            <CommentReply
+                                commentReply={reply}
+                                key={`commentReply-${reply.id}`}
+                            />
+                        ))}
                     </div>
                     <button className='Comment__reply'>REPLY</button>
                 </div>

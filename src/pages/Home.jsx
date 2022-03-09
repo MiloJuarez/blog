@@ -24,6 +24,7 @@ const Home = () => {
                             },
                         ],
                     }}
+                    key={"category-1"}
                 />
                 <Category
                     category={{
@@ -47,6 +48,7 @@ const Home = () => {
                             },
                         ],
                     }}
+                    key={"category-2"}
                 />
                 <Category
                     category={{
@@ -63,6 +65,7 @@ const Home = () => {
                             },
                         ],
                     }}
+                    key={"category-3"}
                 />
             </Categories>
             <PostContent />

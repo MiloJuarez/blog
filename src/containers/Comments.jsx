@@ -43,7 +43,40 @@ const Comments = () => {
                 </form>
             </div>
             <div className='Comments__container'>
-                <Comment />
+                <Comment
+                    comment={{
+                        id: 1,
+                        parent_id: null,
+                        author: "milo juarez gordillo",
+                        date: "12 de feb de 2021 12:23pm",
+                        content:
+                            "Illas semine campoque declivia oppida corpora nam inter fuit discordia tellus solidumque iunctarum erat: quae terrenae ubi rerum recessit iudicis aestu fixo.Illas semine campoque declivia oppida corpora nam inter fuit discordia tellus solidumque iunctarum erat: quae terrenae ubi rerum recessit iudicis aestu fixo Illas semine campoque declivia oppida corpora nam inter fuit discordia tellus solidumque iunctarum erat: quae terrenae ubi",
+                        comment_replies: [],
+                    }}
+                    key={`comment-1`}
+                />
+                <Comment
+                    comment={{
+                        id: 2,
+                        parent_id: null,
+                        author: "fernando aguirre",
+                        date: "12 de feb de 2021 12:23pm",
+                        content:
+                            "recessit iudicis aestu fixo Illas semine campoque declivia oppida corpora nam inter fuit discordia tellus solidumque iunctarum erat: quae terrenae ubi",
+                        comment_replies: [
+                            {
+                                id: 3,
+                                parent_id: 2,
+                                author: "manuel sanchez",
+                                date: "12 de feb de 2021 12:23pm",
+                                content:
+                                    "recessit iudicis aestu fixo Illas semine campoque declivia oppida corpora nam inter fuit discordia tellus solidumque iunctarum erat: quae terrenae ubi",
+                                comment_replies: [],
+                            },
+                        ],
+                    }}
+                    key={`comment-2`}
+                />
             </div>
         </div>
     );

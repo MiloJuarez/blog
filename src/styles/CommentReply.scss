@@ -1,0 +1,40 @@
+@use "vars";
+
+.CommentReply {
+    width: 100%;
+    margin: vars.$mb 0;
+}
+.CommentReply__info {
+    display: flex;
+    height: calc(vars.$pc * 2);
+    margin: vars.$m 0;
+    align-items: center;
+}
+.CommentReply__vote {
+    min-width: calc(vars.$pc * 2);
+    height: calc(vars.$pc * 2);
+    font-size: vars.$fs-nr;
+    color: vars.$text-color;
+    background-color: vars.$primary-color;
+    border-radius: vars.$bradius;
+    border: 1px solid vars.$text-color;
+    cursor: pointer;
+}
+.CommentReply__vote:hover {
+    background: linear-gradient(vars.$secondary-color, vars.$primary-color);
+}
+.CommentReply__author {
+    min-width: vars.$wcategory;
+    padding: 0 vars.$pc;
+    font-size: vars.$fs-nr;
+    font-weight: bold;
+    color: vars.$text-color;
+}
+.CommentReply__date {
+    font-size: vars.$fs-nr;
+    color: vars.$text-color;
+}
+.CommentReply__content {
+    margin-left: 50px;
+    margin-bottom: 0;
+}
