@@ -88,6 +88,9 @@ select:-webkit-autofill {
     -webkit-text-fill-color: vars.$text-color;
     transition: background-color 5000s ease-in-out 0s;
 }
+.Comments__container {
+    padding: calc(vars.$mb * 2) 0;
+}
 @media screen and (max-width: 720px) {
     .Form__flexinput {
         flex-direction: column;
