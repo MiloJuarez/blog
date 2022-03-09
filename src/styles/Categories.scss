@@ -18,7 +18,7 @@
         left: 0;
     }
     to {
-        left: calc(0vw - vars.$wcategory);
+        left: calc(0vw - calc(vars.$wcategory * 2));
     }
 }
 @media screen and (max-width: 1080px) {
