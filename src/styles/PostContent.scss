@@ -24,16 +24,19 @@
     letter-spacing: 1px;
     vertical-align: baseline;
 }
-@keyframes plusWidth {
-    from {
-        width: vars.$wcontent;
-    }
-    to {
-        width: calc(vars.$fullWidth - vars.$wcategory);
+@mixin addWidth($newWidth: vars.$wcontent) {
+    @keyframes plusWidth {
+        from {
+            width: vars.$wcontent;
+        }
+        to {
+            width: $newWidth;
+        }
     }
 }
 @media screen and (max-width: 1280px) {
     .PostContent {
+        @include addWidth($newWidth: calc(vars.$fullWidth - vars.$wcategory));
         animation-name: plusWidth;
         animation-duration: vars.$aDuration;
         animation-fill-mode: forwards;
@@ -43,5 +46,8 @@
     .PostContent {
         margin: 0 auto;
         padding-top: vars.$pc;
+        @include addWidth(
+            $newWidth: calc(vars.$fullWidth - calc(vars.$wcategory / 2))
+        );
     }
 }
